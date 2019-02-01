@@ -1,0 +1,59 @@
+<div class="jumbotron">
+<div class="container mr">
+<div class="row">
+  <h3>Employee-form page</h3>
+  <div class="col-md-8 offset-md-2">
+    
+  
+    <form #form="ngForm" novalidate> 
+      <div class="formgroup">
+        <label for="firstName">First Name</label>
+        <input type="text"  class="form-control " name="firstname" required ngModel >
+      </div>
+      
+      <div class="formgroup">
+        <label for="lastName">last Name</label>
+        <input type="text"  class="form-control " name="lastname" required ngModel >
+      </div>
+      
+      <div class="checkbox">
+        <label>
+            <input type="checkbox" name="isFullTime" ngModel>
+            Full-time
+        </label>
+        
+      </div>
+      <label>Payment-Type</label>
+      <div class="radiobutton">
+          <label>
+              <input type="radio" name="pay-type" value="w2" ngModel>
+              w2
+          </label>
+          
+        </div>
+        <div class="radiobutton">
+            <label>
+                <input type="radio" name="pay-type" value="1099" ngModel>
+                1099
+            </label>
+            
+          </div>
+          
+      <div class="formgroup">
+          <label>Primary Language</label>
+          <select class="form-control">
+            <option > English    </option>
+            <option > spanish    </option>
+            <option > other    </option>
+            
+          </select>
+        </div>
+
+        <button class="btn btn-md btn-primary">ok</button>
+    </form>
+
+
+  </div>
+</div>
+</div>
+</div>
