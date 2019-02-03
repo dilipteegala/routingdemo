@@ -8,17 +8,21 @@
     <form #form="ngForm" novalidate> 
       <div class="formgroup">
         <label for="firstName">First Name</label>
-        <input type="text"  class="form-control " name="firstname" required ngModel >
+        <input #firstname  type="text"  class="form-control " name="firstname" required ngModel>
       </div>
-      
+
+      <h3>model</h3>
+      <h4> {{model | json}} </h4><br>
+      <h3>angular: </h3>{{form.value |json }}
+
       <div class="formgroup">
         <label for="lastName">last Name</label>
-        <input type="text"  class="form-control " name="lastname" required ngModel >
+        <input type="text"  class="form-control " name="lastname" required [(ngModel)]=model.lastname >
       </div>
       
       <div class="checkbox">
         <label>
-            <input type="checkbox" name="isFullTime" ngModel>
+            <input type="checkbox" name="isFullTime" [(ngModel)]=model.isFullTime>
             Full-time
         </label>
         
@@ -26,14 +30,14 @@
       <label>Payment-Type</label>
       <div class="radiobutton">
           <label>
-              <input type="radio" name="pay-type" value="w2" ngModel>
+              <input type="radio" name="paytype" value="w2" [(ngModel)]=model.paytype >
               w2
           </label>
           
         </div>
         <div class="radiobutton">
             <label>
-                <input type="radio" name="pay-type" value="1099" ngModel>
+                <input type="radio" name="paytype" value="1099" [(ngModel)]=model.paytype>
                 1099
             </label>
             
