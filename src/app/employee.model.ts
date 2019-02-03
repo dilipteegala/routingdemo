@@ -4,7 +4,7 @@ export class Employee {
       public  firstname: string,
       public  lastname: string,
       public  isFullTime:boolean,
-      public paytype:string
+      public  paytype:string
       ) {  }
   
   }
